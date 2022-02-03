@@ -71,7 +71,15 @@ function getTotalCount(animals) {
   ];
  * filterByCountMinimum([], 3); //> [] // returns empty array if input array is empty
  */
-function filterByCountMinimum(animals, minimum) {}
+function filterByCountMinimum(animals, minimum) {
+  let minArray = [];
+  for (const animal of animals) {
+    if (animal.count >= minimum) {
+      minArray.push(animal);
+    }
+  }
+  return minArray;
+}
 
 /**
  * FUNCTION DESCRIPTION
